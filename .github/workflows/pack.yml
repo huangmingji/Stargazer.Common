@@ -24,13 +24,13 @@ jobs:
 
     # pack
     - name: Pack Stargazer.Common
-      run: dotnet pack ./src/Stargazer.Common -c Release -p:PackageVersion=${{ github.ref_name }}
+      run: dotnet pack ./Stargazer.Common -c Release -p:PackageVersion=${{ github.ref_name }}
       
     # push to github
     - name: Push Stargazer.Common to github
-      run: dotnet nuget push ./src/Stargazer.Common/bin/Release/Stargazer.Common.*.nupkg --api-key ${{ secrets.GIT_PAT }} --source "https://nuget.pkg.github.com/huangmingji/index.json"
+      run: dotnet nuget push ./Stargazer.Common/bin/Release/Stargazer.Common.*.nupkg --api-key ${{ secrets.GIT_PAT }} --source "https://nuget.pkg.github.com/huangmingji/index.json"
 
     # push to nuget
     - name: Push Stargazer.Common to nuget
-      run: dotnet nuget push ./src/Stargazer.Common/bin/Release/Stargazer.Common.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./Stargazer.Common/bin/Release/Stargazer.Common.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate -s https://api.nuget.org/v3/index.json
     
