@@ -28,7 +28,7 @@ jobs:
       
     # push to github
     - name: Push Stargazer.Common to github
-      run: dotnet nuget push ./Stargazer.Common/bin/Release/Stargazer.Common.*.nupkg --api-key ${{ secrets.GIT_PAT }} --source "https://nuget.pkg.github.com/huangmingji/index.json"
+      run: dotnet nuget push ./Stargazer.Common/bin/Release/Stargazer.Common.*.nupkg --api-key ${{ secrets.GIT_PAT }} --skip-duplicate --source "https://nuget.pkg.github.com/huangmingji/index.json"
 
     # push to nuget
     - name: Push Stargazer.Common to nuget
