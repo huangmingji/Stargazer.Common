@@ -129,7 +129,7 @@ namespace Stargazer.Common
                     throw new InvalidHashException("Base64 decoding of pbkdf2 output failed.", ex);
                 }
 
-                byte[] testHash = PBKDF2(password, salt, PBKDF2_ITERATIONS, hash.Length);
+                byte[] testHash = PBKDF2(password, salt, PBKDF2_ITERATIONS, HASH_BYTES);
                 return SlowEquals(hash, testHash);
             }
 
