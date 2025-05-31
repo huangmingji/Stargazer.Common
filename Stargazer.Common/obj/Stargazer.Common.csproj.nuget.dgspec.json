@@ -47,15 +47,15 @@
           "dependencies": {
             "MailKit": {
               "target": "Package",
-              "version": "[4.9.0, )"
+              "version": "[4.12.1, )"
             },
             "Microsoft.AspNetCore.Components.Web": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.5, )"
             },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
-              "version": "[2.2.2, )"
+              "version": "[2.3.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -63,7 +63,7 @@
             },
             "System.Text.Encodings.Web": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.5, )"
             }
           },
           "imports": [
